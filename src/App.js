@@ -1,51 +1,43 @@
-import React, { useState } from 'react';
-import TodoList from './TodoList';
-import Weather from './Weather';
-import Food from './Food';
-import Food2 from './Food2';
-import Covid19 from './Covid19';
-import UserAuth from './UserAuth';
-import AuthCheck from './AuthCheck';
+import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-
-import { AuthContextProvider } from './AuthContext';
-import Log from './Log';
-import Home from './Home';
-import Protected from './Protected';
-import Timer from './Timer';
+import HomePage from './HomePage';
+import Food from './Food';
+import Covid19 from './Covid19';
+import Weather from './Weather';
+import Food2 from './Food2';
+import Movie from './Movie';
 import NewsApp from './NewsApp';
+import Timer from './Timer';
+import TodoList from './TodoList';
+import Items from './Items';
+
+
 
 function App() {
- 
   return (
-    
     <div className="App">
-   
-    {/* <TodoList/> */}
-    {/* <Weather/> */}
-   {/* <Food/>
-   <Food2/> */}
-   {/* <Covid19/> */}
-   {/* <UserAuth/> */}
-   {/* <AuthCheck/> */}
-   {/* <AuthContextProvider>
+      
+      <Router>
+        <Routes>
+          <Route path='/' element={<HomePage/>}/>
+          <Route path='/food' element={<Food/>}/>
+          <Route path='/covid' element={<Covid19/>}/>
+          <Route path='/weather' element={<Weather/>}/>
+          <Route path='/food2' element={<Food2/>}/>
+          <Route path='/movie' element={<Movie/>}/>
+          <Route path='/news' element={<NewsApp/>}/>
+          <Route path='/timer' element={<Timer/>}/>
+          <Route path='/todo' element={<TodoList/>}/>
+          <Route path='/items' element={<Items/>}/>
 
-   <Routes>
-    <Route path="/" element={<Log />} />
-    <Route path="/home" element={
-      <Protected>
-        <Home/>
-      </Protected>
-    }>
-   
-    </Route>
-   </Routes>
-   
-   </AuthContextProvider> */}
 
-   {/* <Timer/> */}
-   <NewsApp/>
-  
+
+
+          
+        </Routes>
+      </Router>
+      
+
     </div>
   );
 }

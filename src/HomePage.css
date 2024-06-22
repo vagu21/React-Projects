@@ -1,0 +1,31 @@
+.home-page {
+  padding: 40px;
+  text-align: center;
+  background-color: #f7f7f7; /* added a light gray background */
+}
+
+.carding-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1200px; /* increased max width to fit 3 cards */
+  margin: 0 auto; /* added margin to center the container */
+}
+
+.carding {
+  margin: 20px; 
+  padding: 30px; 
+  border: 1px solid #ccc;
+  border-radius: 10px; 
+  text-decoration: none;
+  color: black;
+  width: calc((100% - 60px) / 3); 
+  text-align: center;
+  transition: transform 0.2s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+.carding:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); 
+}

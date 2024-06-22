@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import NewsItem from "./NewsItem";
 
-const NewsBoard = ({ category, country }) => {
+const NewsBoard = ({ category, country, onAddToFavorites }) => {
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
@@ -22,6 +22,7 @@ const NewsBoard = ({ category, country }) => {
               description={news.description}
               src={news.urlToImage}
               url={news.url}
+              onAddToFavorites={onAddToFavorites}
             />
           );
         })
